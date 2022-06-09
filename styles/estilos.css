@@ -1,3 +1,8 @@
+body {
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.3rem;
+}
+
 .materiales__galeria img {
   width: 300px;
   height: 300px;
@@ -7,5 +12,17 @@
 
 .lista {
   list-style-type: none;
+}
+
+.inicio {
+  color: aqua;
+}
+
+.navInicio li a {
+  color: black;
+}
+
+.navInicio li a:hover {
+  color: red;
 }
 /*# sourceMappingURL=estilos.css.map */
