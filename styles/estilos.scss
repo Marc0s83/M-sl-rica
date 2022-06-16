@@ -3,13 +3,18 @@
 body {
     font-family: 'Amatic SC', cursive;
     font-size: 1.3rem;
+    background-color: map-get($color, fondo);
+}
+
+@mixin galeriaImg {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
 }
 
 .materiales__galeria {
     img {
-        width: 300px;
-        height: 300px;
-        object-fit: cover;
+        @include galeriaImg;
     }
 }
 
@@ -17,14 +22,11 @@ body {
     list-style-type: none;
 }
 
-.inicio {
-    color: aqua;
-}
 
 .navInicio {
     li {
         a {
-            color: $colorNav;
+            color: black;
             &:hover{
                 color: $colorNav-hover;
             }
@@ -32,6 +34,11 @@ body {
     }
 }
 
+$navBoreder:(
+    borde: solid 5px black,
+);
 
-
+.borderColor {
+    border: map-get($navBoreder, borde);
+}
 
