@@ -1,10 +1,24 @@
-@import "colores";
+@import "cambios";
 
 body {
     font-family: 'Amatic SC', cursive;
     font-size: 1.3rem;
     background-color: map-get($color, fondo);
 }
+
+
+.menu {
+    div {
+        justify-content: center;
+        ul {
+            @include navbar;
+            a:hover {
+                color:$colorNav-hover
+            }
+        }
+    }
+}
+
 
 @mixin galeriaImg {
     width: 300px;
@@ -22,18 +36,6 @@ body {
     list-style-type: none;
 }
 
-
-.navInicio {
-    li {
-        a {
-            color: black;
-            &:hover{
-                color: $colorNav-hover;
-            }
-        }
-    }
-}
-
 $navBoreder:(
     borde: solid 5px black,
 );
@@ -42,3 +44,14 @@ $navBoreder:(
     border: map-get($navBoreder, borde);
 }
 
+@media (max-width: 992px) {
+    .logo2 {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .bordeDiv {
+        border-right: solid 4px black;
+    }
+}

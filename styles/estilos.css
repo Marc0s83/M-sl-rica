@@ -4,6 +4,21 @@ body {
   background-color: #FFC107;
 }
 
+.menu div {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.menu div ul {
+  text-align: center;
+  font-size: 3.5rem;
+}
+
+.menu div ul a:hover {
+  color: red;
+}
+
 .materiales__galeria img {
   width: 300px;
   height: 300px;
@@ -15,15 +30,19 @@ body {
   list-style-type: none;
 }
 
-.navInicio li a {
-  color: black;
-}
-
-.navInicio li a:hover {
-  color: red;
-}
-
 .borderColor {
   border: solid 5px black;
+}
+
+@media (max-width: 992px) {
+  .logo2 {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .bordeDiv {
+    border-right: solid 4px black;
+  }
 }
 /*# sourceMappingURL=estilos.css.map */
