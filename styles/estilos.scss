@@ -2,13 +2,16 @@
 
 body {
     font-family: 'Amatic SC', cursive;
-    font-size: 1.3rem;
+    font-size: 2.5rem;
     background-color: map-get($color, fondo);
 }
 
 
 .menu {
     div {
+        a{
+            font-size: 4.5rem;
+        }
         justify-content: center;
         ul {
             @include navbar;
@@ -26,9 +29,61 @@ body {
     object-fit: cover;
 }
 
+@mixin materialesImg {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+}
+
+@mixin galeriaCarru {
+    width: 300px;
+    height: 948px;
+    object-fit: cover;
+}
+
+.materiales {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+h2{
+    font-size: 3rem;
+}
+
+h1{
+    font-size: 4rem;
+}
+
 .materiales__galeria {
+    div{
+        padding-bottom: 25px;
+    }
     img {
-        @include galeriaImg;
+        &:hover {
+            transform: scale(1.5);
+        }
+        @include materialesImg;
+        transition: 300ms
+    }
+}
+
+.inicio__galeria {
+    div{
+        img{
+            &:hover {
+                transform: scale(1.5);
+            }
+            @include galeriaImg;
+            transition: 300ms
+        }
+    }
+}
+
+.inicio__carrusel {
+    div{
+        img{
+            @include galeriaCarru;
+        }
     }
 }
 
